@@ -1,11 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.icici</groupId>
-  <artifactId>InteractNew</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>InteractNew Maven Webapp</name>
+
+  <groupId>com.blackducksoftware.test</groupId>
+  <artifactId>example-maven-travis</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <name>Example for Maven/Travis CI</name>
+  <description>Provide an example of configuring a Maven project to scan for vulnerabilities</description>
+  <url>https://github.com/BlackDuckCoPilot/example-maven-travis</url>
+  <inceptionYear>2017</inceptionYear>
+	
   <properties>
 		<struts.version>2.5.18</struts.version>
 		<jdk.version>1.8</jdk.version>
@@ -29,6 +34,14 @@
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 			<version>${struts.version}</version>
+      <type>jar</type>
+      <scope>compile</scope>
+      <exclusions>
+      <exclusion>
+      <artifactId>tools</artifactId>
+      <groupId>com.sun</groupId>
+      </exclusion>
+      </exclusions>
 		</dependency>
 
 		<dependency>
@@ -525,56 +538,42 @@
 			<groupId>com.sun</groupId>
 			<artifactId>tools</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>Base64Decoder</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>stweb</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>axis</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>json-lib-2.3-jdk15</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<!-- <dependency> <groupId>com.sun</groupId> <artifactId>ojdbc14</artifactId>
@@ -584,31 +583,23 @@
 			<groupId>com.sun</groupId>
 			<artifactId>NettySocketClient</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>aes</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>icicicustsms</artifactId>
 			<version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
@@ -632,8 +623,6 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server-standalone</artifactId>
 			<version>3.141.59</version>
-      <scope>system</scope>
-      <systemPath>${java.home}/../lib/tools.jar</systemPath>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
@@ -662,73 +651,5 @@
 			<artifactId>xml-apis</artifactId>
 			<version>1.4.01</version>
 		</dependency>
-		<!-- Selenium Dependencies Added by Pawan -->
-
-  <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit4 -->
-<dependency>
-    <groupId>org.apache.maven.surefire</groupId>
-    <artifactId>surefire-junit4</artifactId>
-    <version>2.14.1</version>
-</dependency>
-
-  </dependencies>
-
-
-  <build>
-    <finalName>InteractNew</finalName>
-    <pluginManagement>
-    <plugins>
-   <plugin>
-    <artifactId>maven-compiler-plugin</artifactId>
-     <version>3.1</version>
-    <configuration>
-     <source>${jdk.version}</source>
-     <target>${jdk.version}</target>
-    </configuration>
-   </plugin>
-   <plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.6.0.1398</version>
-   </plugin>
-
-   <plugin>
-	<artifactId>maven-war-plugin</artifactId>
-	<version>2.2</version>
-	<configuration>
-		<warSourceDirectory>WebContent</warSourceDirectory>
-	</configuration>
-</plugin>
-
-	<plugin>
-		<groupId>org.sonarsource.scanner.maven</groupId>
-		<artifactId>sonar-maven-plugin</artifactId>
-		<version>3.6.0.1398</version>
-	</plugin>
-
-	<plugin>
-		<groupId>org.jacoco</groupId>
-		<artifactId>jacoco-maven-plugin</artifactId>
-		<version>0.8.4</version>
-	</plugin>
-
-
-        <!-- Following plugin executes the testng tests -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.14.1</version>
-                <configuration>
-              <skipTests>false</skipTests>
-
-                </configuration>
-            </plugin>
-            <!-- Compiler plugin configures the java version to be usedfor compiling
-                the code -->
-
-
-
-  </plugins>
-  </pluginManagement>
-  </build>
+	</dependencies>
 </project>
