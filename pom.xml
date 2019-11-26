@@ -459,7 +459,7 @@
 		<dependency>
 			<groupId>sslext</groupId>
 			<artifactId>sslext</artifactId>
-			<version>1.2-0</version>
+			<version>1.10-4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
