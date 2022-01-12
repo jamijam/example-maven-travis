@@ -12,7 +12,7 @@
   <inceptionYear>2017</inceptionYear>
 	
   <properties>
-		<struts.version>2.5.18</struts.version>
+		<struts.version>2.5.25</struts.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
 	<dependencies>
@@ -270,14 +270,14 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.3.5</version>
+			<version>4.5.13</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient-cache -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient-cache</artifactId>
-			<version>4.3.5</version>
+			<version>4.5.13</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
@@ -291,7 +291,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>4.3.5</version>
+			<version>4.5.13</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
@@ -480,7 +480,7 @@
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-tools</artifactId>
-			<version>1.3</version>
+			<version>2.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -636,7 +636,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.0.0</version>
 		</dependency>
 
 	<dependency>
