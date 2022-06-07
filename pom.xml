@@ -12,7 +12,7 @@
   <inceptionYear>2017</inceptionYear>
 	
   <properties>
-		<struts.version>2.5.18</struts.version>
+		<struts.version>6.0.0</struts.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
 	<dependencies>
