@@ -361,14 +361,14 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>1.0</version>
+			<version>20231013</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20080701</version>
+			<version>20231013</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax.ws.rs/jsr311-api -->
