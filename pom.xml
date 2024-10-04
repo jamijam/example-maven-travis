@@ -12,7 +12,7 @@
   <inceptionYear>2017</inceptionYear>
 	
   <properties>
-		<struts.version>2.5.18</struts.version>
+		<struts.version>6.4.0</struts.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
 	<dependencies>
@@ -163,7 +163,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
+			<version>2.14.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
